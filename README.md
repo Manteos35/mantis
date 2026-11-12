@@ -120,7 +120,3 @@ pm2 startup
 This software is intended for informational and analytical purposes only. Cryptocurrency trading involves substantial financial risk. Perform your own due diligence before executing trades.
 EOF
 cd ~/mantis && git add README.md && git commit -m "docs: fix unclosed code blocks and formatting" && git push
-
-
-
-```
