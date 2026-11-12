@@ -1,4 +1,4 @@
-# Dosya: ~/mantis/scorer.py
+
 import asyncio
 from typing import Any, Dict, Optional
 import httpx
