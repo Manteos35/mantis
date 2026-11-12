@@ -35,6 +35,7 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
                                             │
                                             ▼
                                    Telegram Dispatcher
+
 ```
 
 ---
@@ -42,6 +43,7 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
 ## 📦 Getting Started
 
 ### Prerequisites
+
 * Python 3.10+
 * Node.js & PM2 (for 24/7 background deployment)
 * Linux / VPS environment
@@ -49,15 +51,76 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
 ### Installation
 
 1. **Clone the repository:**
+
 ```bash
 git clone [https://github.com/Manteos35/mantis.git](https://github.com/Manteos35/mantis.git)
 cd mantis
+
 ```
 
-Set up the virtual environment:
+2. **Set up the virtual environment:**
 
-Bash
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+```
+
+3. **Configure Environment Variables:**
+
+```bash
+cp .env.example .env
+micro .env
+
+```
+
+Fill in your credentials:
+
+```env
+TELEGRAM_BOT_TOKEN="your_bot_token_here"
+TELEGRAM_CHAT_ID="your_channel_or_chat_id_here"
+
+```
+
+4. **Run the Engine:**
+
+* **Development / Testing:**
+
+```bash
+python3 hunter.py
+
+```
+
+* **Production (PM2):**
+
+```bash
+pm2 start hunter.py --name "mantis-radar" --interpreter ./venv/bin/python3
+pm2 save
+pm2 startup
+
+```
+
+---
+
+## 🛡️ Security Verification Matrix
+
+| Check | Solana Mechanism | EVM / Base Mechanism | Threshold |
+| --- | --- | --- | --- |
+| **Mint Authority** | Token Program Metadata | Contract `owner()` / Mint Function | Must be Revoked |
+| **Freeze Authority** | Token Program Freeze Key | Contract Freeze Functions | Must be Revoked |
+| **Liquidity Lock** | LP Burn / Raydium Vault State | DEX Pair LP Token Balance | Minimum 80% Locked |
+| **Concentration** | Top 10 Holder Balances | Top 10 Holder Balances | < 40% Cumulative Supply |
+| **Tradeability** | On-Chain Simulation | GoPlus Honeypot Detection | Zero Honeypot Risk |
+
+---
+
+## ⚠️ Disclaimer
+
+This software is intended for informational and analytical purposes only. Cryptocurrency trading involves substantial financial risk. Perform your own due diligence before executing trades.
+EOF
+cd ~/mantis && git add README.md && git commit -m "docs: fix unclosed code blocks and formatting" && git push
+
+
+
+```
