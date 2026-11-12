@@ -1,10 +1,10 @@
-# Dosya: ~/mantis/notifier.py
+
 import os
 from typing import Any, Dict, Optional
 from dotenv import load_dotenv
 import httpx
 
-# .env dosyasını otomatik yükle
+
 load_dotenv()
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
