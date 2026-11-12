@@ -1,4 +1,4 @@
-# Dosya: ~/mantis/state.py
+
 from pathlib import Path
 import sqlite3
 import time
@@ -82,5 +82,5 @@ def cleanup_old(hours: int = 24) -> int:
     return 0
 
 
-# Modül import edildiğinde tabloyu otomatik hazırla
+
 init_db()
