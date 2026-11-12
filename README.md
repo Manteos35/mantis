@@ -35,3 +35,18 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
                                             │
                                             ▼
                                    Telegram Dispatcher
+
+
+
+📦 Getting Started
+Prerequisites
+
+    Python 3.10+
+
+    Node.js & PM2 (for 24/7 background deployment)
+
+    Linux / VPS environment
+
+Installation
+
+    Clone the repository:
