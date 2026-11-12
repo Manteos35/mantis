@@ -1,0 +1,13 @@
+# Python & Sanal Ortam
+venv/
+__pycache__/
+*.pyc
+
+# Veritabanı ve Loglar
+seen_tokens.db
+seen_tokens.db-shm
+seen_tokens.db-wal
+*.log
+
+# Ortam Değişkenleri
+.env
