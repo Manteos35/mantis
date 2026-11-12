@@ -57,7 +57,7 @@ cd mantis
 Set up the virtual environment:
 
 Bash
-
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
