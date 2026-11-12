@@ -35,18 +35,29 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
                                             │
                                             ▼
                                    Telegram Dispatcher
+```
 
+---
 
+## 📦 Getting Started
 
-📦 Getting Started
-Prerequisites
+### Prerequisites
+* Python 3.10+
+* Node.js & PM2 (for 24/7 background deployment)
+* Linux / VPS environment
 
-    Python 3.10+
+### Installation
 
-    Node.js & PM2 (for 24/7 background deployment)
+1. **Clone the repository:**
+```bash
+git clone [https://github.com/Manteos35/mantis.git](https://github.com/Manteos35/mantis.git)
+cd mantis
+```
 
-    Linux / VPS environment
+Set up the virtual environment:
 
-Installation
+Bash
 
-    Clone the repository:
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
