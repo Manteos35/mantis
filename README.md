@@ -7,6 +7,13 @@
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
 </p>
 
+<p align="center">
+  <a href="https://t.me/+zqvus3CxenNhMjU0">
+    <img src="https://img.shields.io/badge/Live_Signals-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Live Telegram Demo">
+  </a>
+</p>
+
+
 A high-performance, asynchronous on-chain token scanner engineered for **Solana** and **Base** ecosystems. Mantis identifies newly surfaced token pairs, filters them through real-time liquidity/volume thresholds, executes an automated risk assessment pipeline, and dispatches actionable trade signals to Telegram with direct execution terminals.
 
 <p align="center">
