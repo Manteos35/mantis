@@ -1,17 +1,28 @@
 # ⚡ Mantis Crypto Radar
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Chains-Solana%20%7C%20Base-black?style=for-the-badge" alt="Chains">
+  <img src="https://img.shields.io/badge/Security-RugCheck%20%26%20GoPlus-emerald?style=for-the-badge" alt="Security">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
+</p>
+
 A high-performance, asynchronous on-chain token scanner engineered for **Solana** and **Base** ecosystems. Mantis identifies newly surfaced token pairs, filters them through real-time liquidity/volume thresholds, executes an automated risk assessment pipeline, and dispatches actionable trade signals to Telegram with direct execution terminals.
+
+<p align="center">
+  <img src="./Untitled.png" alt="Mantis Telegram Alert Preview" width="460">
+</p>
 
 ---
 
 ## 🚀 Key Features
 
-* **Dual-Chain Parallel Ingestion:** Concurrent scanning across Solana and Base using `httpx` connection pooling and `asyncio.gather`.
-* **Multi-Layer Security Pipeline:** Automated contract security checks via RugCheck and GoPlus APIs (flags mint authority, freeze authority, honeypots, and top-holder concentration).
-* **Persistent Deduplication:** SQLite state machine running in WAL mode to eliminate redundant alerts across restarts.
-* **Smart Rate Limiting:** Concurrency control with `asyncio.Semaphore`, proactive 429 backoff handling, and jittered retries.
-* **Instant Execution UX:** Telegram notifications formatted with instant trading action buttons (Trojan Bot, BullX Terminal, DexScreener, and CA copy).
-* **System Telemetry:** Automated hourly diagnostic reporting tracking scanned pools, filtered volume, blocked rugs, and engine uptime.
+- **Dual-Chain Parallel Ingestion:** Concurrent scanning across Solana and Base using `httpx` connection pooling and `asyncio.gather`.
+- **Multi-Layer Security Pipeline:** Automated contract security checks via RugCheck and GoPlus APIs (flags mint authority, freeze authority, honeypots, and top-holder concentration).
+- **Persistent Deduplication:** SQLite state machine running in WAL mode to eliminate redundant alerts across restarts.
+- **Smart Rate Limiting:** Concurrency control with `asyncio.Semaphore`, proactive 429 backoff handling, and jittered retries.
+- **Instant Execution UX:** Telegram notifications formatted with instant trading action buttons (Trojan Bot, BullX Terminal, DexScreener, and CA copy).
+- **System Telemetry:** Automated hourly diagnostic reporting tracking scanned pools, filtered volume, blocked rugs, and engine uptime.
 
 ---
 
@@ -35,7 +46,6 @@ DexScreener Feeds ───► Concurrency Control (Semaphore)
                                             │
                                             ▼
                                    Telegram Dispatcher
-
 ```
 
 ---
